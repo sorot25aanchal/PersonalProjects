@@ -13,19 +13,20 @@ public class VotingRPC {
 		votingService voting = new votingService();
 		int ageInFile = 0, ageEntered;
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter Your Age");
+		System.out.println("Please Enter Your Age");
 		ageEntered = scanner.nextInt();
 		File file = new File("D:\\Documents\\age.txt");
 		try {
 			Scanner read = new Scanner(file);
 			if (read.hasNextInt()) {
 				ageInFile = read.nextInt();
-				System.out.println("Age in file is " + ageInFile);
+				System.out.println("Age in file is :" + ageInFile);
 			}
 				voting.ageInvalidException(ageEntered, ageInFile);
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+			System.out.println(e);
 		}
 		
 		
