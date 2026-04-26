@@ -20,7 +20,7 @@ public class VotingRPC {
 			Scanner read = new Scanner(file);
 			if (read.hasNextInt()) {
 				ageInFile = read.nextInt();
-				System.out.println("Age in file is :" + ageInFile);
+				System.out.println("Age in file is is :" + ageInFile);
 			}
 				voting.ageInvalidException(ageEntered, ageInFile);
 			
